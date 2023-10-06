@@ -1,4 +1,3 @@
-// import '../../styling/components/pages/login.css'
 import '@/app/styling/pages/login.css'
 import Image from 'next/image'
 
