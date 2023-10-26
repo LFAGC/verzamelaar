@@ -1,26 +1,50 @@
 "use client"
 
+import { LoginUser } from '@/app/lib/login/login'
 import { RegisterUser } from '@/app/lib/login/register'
 import '@/app/styling/pages/login.css'
 
 export function LoginForm(Register) {
     let OnRegister = Register['Register']['Register']
 
-    const onRegister = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
 
-        const formdata = new FormData(e.target);
-        const data = Object.fromEntries(formdata.entries());
+        if (OnRegister) {
+            const formdata = new FormData(e.target);
+            const data = Object.fromEntries(formdata.entries());
 
-        const Email = data.email;
-        const Password = data.password;
+            const Email = data.email;
+            const Password = data.password;
 
-        RegisterUser(Email, Password)
+            const Registered = RegisterUser(Email, Password)
+
+            if (Registered) {
+                const LoggedIn = LoginUser(Email, Password)
+
+                if (LoggedIn) {
+                    console.log('Ingelogt')
+                }
+            } 
+        } else {
+            const formdata = new FormData(e.target);
+            const data = Object.fromEntries(formdata.entries());
+    
+            const Email = data.email;
+            const Password = data.password;
+    
+            const LoggedIn = LoginUser(Email, Password)
+
+            if (LoggedIn) {
+                console.log('Ingelogt')
+            }
+        }
+
     }
 
     return( 
         <div className='login-form-container'>
-            <form onSubmit={onRegister}>
+            <form onSubmit={onSubmit}>
                 {OnRegister ? (
                     <span className='login-form-big-text'>Registreer je account</span>
                 ) : (
