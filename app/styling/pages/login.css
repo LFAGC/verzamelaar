@@ -18,19 +18,6 @@
     backdrop-filter: blur(10px);
 }
 
-.ttest {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    font-size: 5vh;
-
-    z-index: 999;
-}
-
 .login-bg {
     position: absolute;
 

@@ -9,7 +9,6 @@ import React from 'react'
 export default function Login(Register) {    
     return(
         <>
-            {/* <Navbar Name={'Login'}/> */}
             <Image src={'/loginbg.jpg'} width={1920} height={1080} className='login-bg'></Image>
             <div className='w-3/5 h-full absolute top-0 left-1/2 -translate-x-1/2'>
                 <LoginText/>
