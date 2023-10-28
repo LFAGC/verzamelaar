@@ -19,6 +19,6 @@ export async function RegisterUser(Email, Password) {
 
         return true
     } else  {
-        console.log('Gebruiker bestaat al')
+        return false
     }
 }

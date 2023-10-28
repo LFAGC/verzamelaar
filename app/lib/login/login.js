@@ -1,5 +1,6 @@
 import { supabase } from "../supabase/config";
 import StringCrypto from "string-crypto";
+import { setCurrentUser } from "./userhandler";
 
 export async function LoginUser(Email, Password) {
     const {
@@ -15,6 +16,7 @@ export async function LoginUser(Email, Password) {
         const checkPass = decryptString(SelectedUser.password, Email)
 
         if (checkPass == Password) {
+            setCurrentUser(SelectedUser)
             return true
         } else {
             return false

@@ -3,11 +3,14 @@
 import { LoginUser } from '@/app/lib/login/login'
 import { RegisterUser } from '@/app/lib/login/register'
 import '@/app/styling/pages/login.css'
+import { redirect } from 'next/dist/server/api-utils'
+import { useRouter } from 'next/navigation'
 
 export function LoginForm(Register) {
     let OnRegister = Register['Register']['Register']
+    const router = useRouter()
 
-    const onSubmit = (e) => {
+    async function onSubmit(e) {
         e.preventDefault();
 
         if (OnRegister) {
@@ -17,13 +20,14 @@ export function LoginForm(Register) {
             const Email = data.email;
             const Password = data.password;
 
-            const Registered = RegisterUser(Email, Password)
+
+            const Registered = await RegisterUser(Email, Password)
 
             if (Registered) {
                 const LoggedIn = LoginUser(Email, Password)
 
                 if (LoggedIn) {
-                    console.log('Ingelogt')
+                    router.push('/')
                 }
             } 
         } else {
@@ -33,10 +37,10 @@ export function LoginForm(Register) {
             const Email = data.email;
             const Password = data.password;
     
-            const LoggedIn = LoginUser(Email, Password)
+            const LoggedIn = await LoginUser(Email, Password)
 
             if (LoggedIn) {
-                console.log('Ingelogt')
+                router.push('/')
             }
         }
 

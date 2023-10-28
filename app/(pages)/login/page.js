@@ -4,7 +4,6 @@ import { LoginForm } from '@/app/components/login/loginform'
 import { LoginSlideShow } from '@/app/components/login/loginslide'
 import { LoginText } from '@/app/components/login/logintext'
 import Image from 'next/image'
-import React from 'react'
 
 export default function Login(Register) {    
     return(

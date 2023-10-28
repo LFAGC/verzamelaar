@@ -1,0 +1,57 @@
+.carspace-container {
+    background-color: rgba(30, 29, 29, 0.833);
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    border-radius: .5vh;
+
+    backdrop-filter: blur(30px);
+
+    width: 80%;
+    height: 62.5%;
+
+    
+}
+
+.carspace-slots {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 95%;
+    height: 90%;
+
+    overflow: auto;
+}
+
+.carspace-slots::-webkit-scrollbar {
+    display: none;
+}
+
+.carspace-slot {
+    position: relative;
+    display: inline-block;
+
+    top:  2vh;
+    left: 2vh;
+
+    margin-right: 6vh;
+    margin-bottom: 8vh;
+
+    width: 38vh;
+    height: 20vh;
+
+    background-color: black;
+}
+
+.car-slot-image {
+    position: absolute;
+
+    top: 1vh;
+    left: 1vh;
+
+    
+}
