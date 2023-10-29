@@ -1,7 +1,7 @@
 .searchengine-container {
     background-color: rgba(30, 29, 29, 0.833);
 
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
 
     border-radius: .5vh;
 
@@ -35,15 +35,15 @@
     position: relative;
     display: inline-block;
 
-    left: 15%;
+    left: 19vh;
     top: 65%;
 
-    transform: translate(-15%, -50%);
+    transform: translate(0, -50%);
 
-    margin-right: 5vh;
+    margin-right: 22.5vh;
 
     background-color: rgb(58, 57, 57);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
 
     font-size: 1.8vh;
 
@@ -68,13 +68,11 @@
 .search-title {
     position: absolute;
 
-    top: 1.25vh;
-    left: 50%;
+    top: 1.75vh;
+    left: 48.5%;
 
     transform: translate(-50%, 0);
 
     font-size: 2vh;
     font-weight: 700;
-
-
 }

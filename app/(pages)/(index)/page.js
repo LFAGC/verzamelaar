@@ -16,8 +16,6 @@ export default function Home() {
     const func = async function() {
       const State = await checkLoginState();
 
-      console.log(State)
-
       if (!State) {
         router.push('/login')
       }
@@ -32,6 +30,6 @@ export default function Home() {
       <Navbar Name={'Hoofdpagina'}/>
       <SearchMachine/>
       <CarSpace/>
-      </>
+    </>
   )
 }

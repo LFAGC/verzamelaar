@@ -1,7 +1,5 @@
 .carspace-container {
-    background-color: rgba(30, 29, 29, 0.833);
-
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: rgba(126, 126, 126, 0.295);
 
     border-radius: .5vh;
 
@@ -10,7 +8,7 @@
     width: 80%;
     height: 62.5%;
 
-    
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
 }
 
 .carspace-slots {
@@ -21,7 +19,7 @@
 
     transform: translate(-50%, -50%);
 
-    width: 95%;
+    width: 80%;
     height: 90%;
 
     overflow: auto;
@@ -36,22 +34,96 @@
     display: inline-block;
 
     top:  2vh;
-    left: 2vh;
+    left: 3.25vh;
 
     margin-right: 6vh;
     margin-bottom: 8vh;
 
-    width: 38vh;
-    height: 20vh;
+    width: 35vh;
+    height: 40vh;
 
-    background-color: black;
+    background-color: rgba(20, 20, 20, 0.863);
+
+    border-radius: .5vh;
+
+    box-shadow: rgba(0, 0, 0, 0.795) 0px 7px 29px 0px;
 }
 
 .car-slot-image {
     position: absolute;
 
-    top: 1vh;
+    top: 2vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 90%;
+    height: 52.5%;
+
+    object-fit: cover;
+
+    border-radius: .5vh;
+}
+
+.car-slot-vehicle-name {
+    position: absolute;
+
+    top: 23.5vh;
+    left: 2vh;
+
+    font-size: 1.8vh;
+    font-weight: 700;
+}
+
+.car-slot-spec-sheet {
+    position: absolute;
+
+    bottom: 2vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 90%;
+    height: 27%;
+
+    border-radius: .5vh;
+
+    background-color: rgb(54, 54, 54);
+}
+
+.car-slot-spec {
+    position: relative;
+
+    top: 0vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 95%;
+    height: 2.5vh;
+
+    margin-bottom: .25vh;
+}
+
+.car-slot-spec-label {
+    position: relative;
+
+    top: 50%;
     left: 1vh;
 
-    
+    transform: translate(0, -50%);
+
+    font-size: 1.5vh;
+    font-weight: 700;
+}
+
+.car-slot-spec-data {
+    position: relative;
+
+    top: 50%;
+    left: 2vh;
+
+    transform: translate(0, -50%);
+
+    font-size: 1.5vh;
 }

@@ -25,7 +25,7 @@
 
     background-color: rgba(75, 75, 75, 0.592);
 
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
 
     backdrop-filter: blur(10px);
 }
@@ -48,7 +48,23 @@
 
     background-color: rgba(75, 75, 75, 0.592);
 
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
 
     backdrop-filter: blur(10px);
+}
+
+.navbar-link {
+    position: absolute;
+
+    top: 50%;
+    left: 2vh;
+
+    transform: translate(0, -50%);
+
+    font-size: 1.75vh;
+
+    padding: 1vh;
+
+    background-color: rgb(19, 18, 18);
+    border-radius: .5vh;
 }
