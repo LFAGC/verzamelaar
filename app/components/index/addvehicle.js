@@ -1,11 +1,25 @@
 import { AddVehicle } from '@/app/lib/advertisements/addvehicle'
 import '../../styling/components/addvehicle.css'
+import { Princess_Sofia } from 'next/font/google'
 
 
 
 export const AddVehicleMenu = function() {
     const addVehicleHandler = function() {
+        const postData = {
+            make :  document.getElementsByClassName('add-vehicle-menu-input-merk'),
+            model : document.getElementsByClassName('add-vehicle-menu-input-model'),
+            type : document.getElementsByClassName('add-vehicle-menu-input-type'),
+            price : document.getElementsByClassName('add-vehicle-menu-input-prijs'),
 
+            types : {
+                milage : document.getElementsByClassName('add-vehicle-menu-type-input-stand'),
+                horsepower : document.getElementsByClassName('add-vehicle-menu-type-input-vermogen'),
+                fueltype : document.getElementsByClassName('add-vehicle-menu-type-input-brandstof'),
+            }
+        }
+
+        AddVehicle(postData)
     }
 
     return(
@@ -21,9 +35,9 @@ export const AddVehicleMenu = function() {
                 <div className='add-vehicle-menu-types'>
                     <span className='add-vehicle-menu-types-title'>Voertuig Specificaties</span>
 
-                    <input className='relative add-vehicle-menu-type-input' type='number' placeholder='Kilometerstand'></input>
-                    <input className='relative add-vehicle-menu-type-input' type='number' placeholder='Vermogen'></input>
-                    <input className='relative add-vehicle-menu-type-input' type='text' placeholder='Brandstof'></input>
+                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-stand' type='number' placeholder='Kilometerstand'></input>
+                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-vermogen' type='number' placeholder='Vermogen'></input>
+                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-brandstof' type='text' placeholder='Brandstof'></input>
                 </div>
 
                 <div className='absolute add-vehicle-menu-button' onClick={addVehicleHandler}><span>Toevoegen</span></div>

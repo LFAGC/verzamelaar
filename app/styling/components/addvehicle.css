@@ -53,6 +53,8 @@
     box-shadow: rgba(0, 0, 0, 0.575) 0px 5px 15px;
 
     border-radius: .5vh;
+
+    text-align: center;
 }
 
 .add-vehicle-menu-input:focus {
@@ -119,6 +121,8 @@
 
 .add-vehicle-menu-type-input:focus {
     outline: none;
+    text-align: center;
+
 }
 
 .add-vehicle-menu-type-input[type=number]::-webkit-inner-spin-button, 
@@ -139,6 +143,8 @@
 
     border-radius: .5vh;
     transition: .2s background-color;
+
+    cursor: pointer;
 }
 
 .add-vehicle-menu-button:hover {
