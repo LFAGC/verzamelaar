@@ -1,4 +1,7 @@
 .carspace-container {
+    top: 25vh;
+
+
     background-color: rgba(126, 126, 126, 0.295);
 
     border-radius: .5vh;
@@ -6,7 +9,7 @@
     backdrop-filter: blur(30px);
 
     width: 80%;
-    height: 62.5%;
+    height: 55vh;
 
     box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
 }
@@ -37,7 +40,7 @@
     left: 3.25vh;
 
     margin-right: 6vh;
-    margin-bottom: 8vh;
+    margin-bottom: 2vh;
 
     width: 35vh;
     height: 40vh;
@@ -68,10 +71,10 @@
 .car-slot-vehicle-name {
     position: absolute;
 
-    top: 23.5vh;
+    top: 24vh;
     left: 2vh;
 
-    font-size: 1.8vh;
+    font-size: 1.65vh;
     font-weight: 700;
 }
 

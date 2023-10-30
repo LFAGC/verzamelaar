@@ -10,7 +10,7 @@ export const SearchMachine = function() {
     }   
 
     return(
-        <div className="absolute left-1/2 -translate-x-1/2 searchengine-container">
+        <div className="relative left-1/2 -translate-x-1/2 searchengine-container">
             <span className='search-title'>Zoeken</span>
 
             <input className='search-input' type='text' placeholder='Merk'></input>

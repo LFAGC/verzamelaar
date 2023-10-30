@@ -6,14 +6,17 @@ import { CarSpace } from '@/app/components/index/carspace'
 import Image from 'next/image'
 import { SearchMachine } from '@/app/components/index/searchmachine'
 import { checkLoginState } from '@/app/lib/login/userhandler'
-import { useRouter } from 'next/navigation'
-import { useEffect } from 'react'
+import { useRouter, useSearchParams} from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { AddVehicleMenu } from '@/app/components/index/addvehicle'
 
 export default function Home() {
   const router = useRouter();
+  const query = useSearchParams();
+  const [isAddVehicleCalled, setAddVehicleState] = useState(true)
 
   useEffect(() => {
-    const func = async function() {
+    const loginState = async function() {
       const State = await checkLoginState();
 
       if (!State) {
@@ -21,8 +24,19 @@ export default function Home() {
       }
     }
 
-    func()
+    loginState()
+
+    if (query.get('addvehicle') != '') {
+      if (JSON.parse(query.get('addvehicle'))) {
+        setAddVehicleState(true)
+        console.log('mooi')
+      } else {
+        setAddVehicleState(false)
+      }
+    }
   }, [])
+
+
 
   return (
     <>
@@ -30,6 +44,8 @@ export default function Home() {
       <Navbar Name={'Hoofdpagina'}/>
       <SearchMachine/>
       <CarSpace/>
+
+      {isAddVehicleCalled ? (<AddVehicleMenu/>) : (<></>)}
     </>
   )
 }

@@ -13,4 +13,3 @@ export const setCurrentUser = function(userData) {
     sessionStorage.setItem('LoggedIn', 'true')
     sessionStorage.setItem('CurrentData', JSON.stringify(userData))
 }
-

@@ -10,16 +10,14 @@
     top: 20vh;
 
     width: 80%;
-    height: 13vh;
+    height: max-content;
 }
 
 .search-button {
     position: absolute;
 
-    top: 65%;
+    bottom: 2vh;
     right: 2vh;
-
-    transform: translate(0, -50%);
 
     padding: 1.5vh;
 
@@ -35,12 +33,10 @@
     position: relative;
     display: inline-block;
 
-    left: 19vh;
-    top: 65%;
+    left: 12%;
+    top: 2vh;
 
-    transform: translate(0, -50%);
-
-    margin-right: 22.5vh;
+    margin-right: 5vh;
 
     background-color: rgb(58, 57, 57);
     box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
@@ -52,6 +48,8 @@
     border-radius: .5vh;
 
     text-align: center;
+
+    margin-bottom: 4vh;
 }
 
 .search-input:focus {
@@ -67,11 +65,10 @@
 
 .search-title {
     position: absolute;
+    display: none;
 
     top: 1.75vh;
-    left: 48.5%;
-
-    transform: translate(-50%, 0);
+    left: 19vh;
 
     font-size: 2vh;
     font-weight: 700;
