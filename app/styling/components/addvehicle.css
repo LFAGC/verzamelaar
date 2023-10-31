@@ -168,3 +168,13 @@
 .add-vehicle-menu-input-image {
     width: 90%;
 }
+
+.add-vehicle-menu-close {
+    top: 3vh;
+    right: 3vh;
+
+    font-size: 2vh;
+    font-weight: 700;
+
+    cursor: pointer;
+}

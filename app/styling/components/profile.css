@@ -1,0 +1,171 @@
+.profile-page-main-container {
+    background-color: rgba(62, 63, 63, 0.329);
+
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    animation: fadeInAnimation .2s ease-in forwards
+}
+
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.profile-page-menu-container {
+    width: 70vh;
+    height: 60vh;
+
+    border-radius: .5vh;
+
+    background-color: rgba(34, 34, 34);
+    box-shadow: rgba(0, 0, 0, 0.575) 0px 5px 15px;
+}
+
+.profile-page-title {
+    top: 3vh;
+    left: 3vh;
+
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.profile-page-subtitle {
+    top: 8vh;
+    left: 3vh;
+
+    font-size: 1.8vh;
+}
+
+.profile-page-posts {
+    bottom: 2vh;
+    left: 3vh;
+
+    width: 90%;
+    height: 75%;
+
+    background-color: rgb(61, 61, 61);
+    box-shadow: rgba(0, 0, 0, 0.575) 0px 5px 15px;
+    border-radius: .5vh;
+
+    overflow: auto;
+}
+
+.profile-page-posts::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-page-menu-close {
+    top: 3vh;
+    right: 3vh;
+
+    font-size: 2vh;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.profile-slot {
+    position: relative;
+    display: inline-block;
+
+    top:  2vh;
+    left: 3.25vh;
+
+    margin-right: 1vh;
+    margin-bottom: 2vh;
+
+    width: 28vh;
+    height: 37vh;
+
+    background-color: rgba(20, 20, 20, 0.863);
+
+    border-radius: .5vh;
+
+    box-shadow: rgba(0, 0, 0, 0.795) 0px 7px 29px 0px;
+
+    cursor: pointer;
+}
+
+.profile-slot-image {
+    position: absolute;
+
+    top: 2vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 90%;
+    height: 52.5%;
+
+    object-fit: cover;
+
+    border-radius: .5vh;
+}
+
+.profile-slot-vehicle-name {
+    position: absolute;
+
+    top: 22vh;
+    left: 2vh;
+
+    font-size: 1.4vh;
+    font-weight: 700;
+}
+
+.profile-slot-spec-sheet {
+    position: absolute;
+
+    bottom: 2vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 90%;
+    height: 27%;
+
+    border-radius: .5vh;
+
+    background-color: rgb(54, 54, 54);
+}
+
+.profile-slot-spec {
+    position: relative;
+
+    top: 0vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 95%;
+    height: 2.5vh;
+
+    margin-bottom: .25vh;
+}
+
+.profile-slot-spec-label {
+    position: relative;
+
+    top: 50%;
+    left: 1vh;
+
+    transform: translate(0, -50%);
+
+    font-size: 1.5vh;
+    font-weight: 700;
+}
+
+.profile-slot-spec-data {
+    position: relative;
+
+    top: 50%;
+    left: 2vh;
+
+    transform: translate(0, -50%);
+
+    font-size: 1.5vh;
+}

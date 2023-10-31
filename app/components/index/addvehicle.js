@@ -7,6 +7,11 @@ import { useRouter} from 'next/navigation'
 export const AddVehicleMenu = function() {
     const router = useRouter();
 
+    const closeMenu = function() {
+        router.push('/')
+        router.refresh()
+    }
+
     const addVehicleHandler = function() {
         const postData = {
             make :  document.getElementsByClassName('add-vehicle-menu-input-merk')[0].value,
@@ -30,6 +35,7 @@ export const AddVehicleMenu = function() {
     return(
         <div className="add-vehicle-menu-container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className='add-vehicle-menu-inner-container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
+                <div className='absolute add-vehicle-menu-close' onClick={closeMenu}>X</div>
                 <span className='add-vehicle-menu-title absolute'>Voertuig Plaatsen</span>
 
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-merk' type='text' placeholder='Merk'></input>
