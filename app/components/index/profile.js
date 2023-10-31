@@ -2,7 +2,7 @@ import '../../styling/components/profile.css'
 import { useRouter} from 'next/navigation'
 import { supabase } from '@/app/lib/supabase/config'
 import { useState, useEffect } from 'react'
-import { returnUserId } from '@/app/lib/login/userhandler'
+import { returnPostAmount, returnUserId, returnUserName } from '@/app/lib/login/userhandler'
 import Image from 'next/image'
 
 export const ProfilePage = function() {
@@ -14,14 +14,20 @@ export const ProfilePage = function() {
     }
 
     const [allPosts, setPosts] = useState([])
+    const [currentUserName, setCurrentUserName] = useState('')
+    const [currentPostsAmount, setCurrentPostsAmount] = useState(0)
 
     useEffect(() => {
     
         const getVehicles = async function() {
             const currentUserId = await returnUserId()
+            const username = await returnUserName()
+            const postamount = await returnPostAmount()
             const {data, error} = await supabase.from('Posts').select('*').eq('userid', currentUserId)
 
             setPosts(data)
+            setCurrentPostsAmount(postamount)
+            setCurrentUserName(username)
         } 
 
         getVehicles()
@@ -33,8 +39,8 @@ export const ProfilePage = function() {
             <div className='absolute profile-page-menu-container left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
                 <div className='absolute profile-page-menu-close' onClick={closeMenu}>X</div>
 
-                <span className='absolute profile-page-title'>placeholder@hotmail.com</span>
-                <span className='absolute profile-page-subtitle'>20 Posts</span>
+                <span className='absolute profile-page-title'>{currentUserName}</span>
+                <span className='absolute profile-page-subtitle'>{currentPostsAmount} Posts</span>
 
                 <div className='absolute profile-page-posts'>
                     {allPosts.map((value, index) => (

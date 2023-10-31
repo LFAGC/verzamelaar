@@ -21,3 +21,19 @@ export const returnUserId = function() {
 
     return userData.userid
 }
+
+export const returnUserName = function() {
+    const userDataStr = sessionStorage.getItem('CurrentData')
+
+    const userData = JSON.parse(userDataStr)
+
+    return userData.username
+}
+
+export const returnPostAmount = function() {
+    const userDataStr = sessionStorage.getItem('CurrentData')
+
+    const userData = JSON.parse(userDataStr)
+
+    return userData.postsamount
+}
