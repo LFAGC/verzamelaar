@@ -13,7 +13,7 @@ export const SearchMachine = function() {
         const Model = document.getElementsByClassName('search-input-model')[0].value 
         const Type = document.getElementsByClassName('search-input-type')[0].value
 
-        router.push('?search={make : '+Make+', model : '+Model+', type : '+Type+'}')
+        router.push(`?search=true&make=${Make}&model=${Model}&type=${Type}`);
     }   
 
     return(
