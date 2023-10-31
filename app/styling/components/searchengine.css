@@ -73,3 +73,21 @@
     font-size: 2vh;
     font-weight: 700;
 }
+
+@media (max-width: 600px) {
+    .searchengine-container  {
+        left: 3vh;
+        transform: translate(0, 0);
+        height: 40vh;
+    }
+
+    .search-button {
+        left: 1vh;
+    }
+
+    .search-input {
+        left: 1vh;
+
+        width: 95%;
+    }
+}

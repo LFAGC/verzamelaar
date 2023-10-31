@@ -70,6 +70,8 @@
     top: 0;
     left: 0;
 
+    width: max-content;
+
     font-size: 4vh;
     font-weight: 700;
 
@@ -78,6 +80,8 @@
 
 .login-text-small {
     position: absolute;
+
+    width: max-content;
 
     bottom: 0;
     left: 0;
@@ -201,4 +205,25 @@
 .login-form-button:hover {
     background-color: rgb(62, 63, 63);
     transition: .2s all;
+}
+
+@media (max-width: 1500px) {  
+    .login-slide-container {
+        display: none;
+    }
+
+    .login-text-big {
+        left: -1vh;
+
+    }
+
+    .login-text-container {
+        left: -6vh;
+
+    }
+
+    .login-form-container {
+        left: -6vh;
+        width: 100%;
+    }
 }
