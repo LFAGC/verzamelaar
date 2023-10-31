@@ -1,25 +1,30 @@
 import { AddVehicle } from '@/app/lib/advertisements/addvehicle'
 import '../../styling/components/addvehicle.css'
-import { Princess_Sofia } from 'next/font/google'
+import { useRouter} from 'next/navigation'
 
 
 
 export const AddVehicleMenu = function() {
+    const router = useRouter();
+
     const addVehicleHandler = function() {
         const postData = {
-            make :  document.getElementsByClassName('add-vehicle-menu-input-merk'),
-            model : document.getElementsByClassName('add-vehicle-menu-input-model'),
-            type : document.getElementsByClassName('add-vehicle-menu-input-type'),
-            price : document.getElementsByClassName('add-vehicle-menu-input-prijs'),
+            make :  document.getElementsByClassName('add-vehicle-menu-input-merk')[0].value,
+            model : document.getElementsByClassName('add-vehicle-menu-input-model')[0].value,
+            type : document.getElementsByClassName('add-vehicle-menu-input-type')[0].value,
+            price : document.getElementsByClassName('add-vehicle-menu-input-prijs')[0].value,
+            image : document.getElementsByClassName('add-vehicle-menu-input-image')[0].value,
 
             types : {
-                milage : document.getElementsByClassName('add-vehicle-menu-type-input-stand'),
-                horsepower : document.getElementsByClassName('add-vehicle-menu-type-input-vermogen'),
-                fueltype : document.getElementsByClassName('add-vehicle-menu-type-input-brandstof'),
+                milage : document.getElementsByClassName('add-vehicle-menu-type-input-stand')[0].value,
+                horsepower : document.getElementsByClassName('add-vehicle-menu-type-input-vermogen')[0].value,
+                fueltype : document.getElementsByClassName('add-vehicle-menu-type-input-brandstof')[0].value,
             }
+
+            
         }
 
-        AddVehicle(postData)
+        AddVehicle(postData, router)
     }
 
     return(
@@ -31,6 +36,7 @@ export const AddVehicleMenu = function() {
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-model' type='text' placeholder='Model'></input>
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-type' type='text' placeholder='Type'></input>
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-prijs' type='number' placeholder='Prijs'></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-image' type='text' placeholder='Afbeelding'></input>
 
                 <div className='add-vehicle-menu-types'>
                     <span className='add-vehicle-menu-types-title'>Voertuig Specificaties</span>

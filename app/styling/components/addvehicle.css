@@ -12,7 +12,7 @@
 
 .add-vehicle-menu-inner-container {
     width: 50vh;
-    height: 67vh;
+    height: 75vh;
 
     background-color: rgb(39, 39, 39);
 
@@ -163,4 +163,8 @@
 
     font-weight: 700;
     font-size: 1.8vh;
+}
+
+.add-vehicle-menu-input-image {
+    width: 90%;
 }

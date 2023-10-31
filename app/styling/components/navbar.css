@@ -41,7 +41,7 @@
     font-size: 2vh;
     font-weight: 700;
 
-    width: 40vh;
+    width: 24vh;
     height: 7vh;
 
     border-radius: .5vh;
@@ -54,12 +54,10 @@
 }
 
 .navbar-link {
-    position: absolute;
+    position: relative;
 
-    top: 50%;
+    top: 2vh;
     left: 2vh;
-
-    transform: translate(0, -50%);
 
     font-size: 1.75vh;
 
@@ -67,4 +65,6 @@
 
     background-color: rgb(19, 18, 18);
     border-radius: .5vh;
+
+    margin-right: 1vh;
 }

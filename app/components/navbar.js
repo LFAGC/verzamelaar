@@ -7,6 +7,7 @@ export function Navbar(Data) {
             <span className='navbar-title'>{Data.Name}</span>
             <div className='navbar-links'>
                 <a className='navbar-link' href='?addvehicle=true'>Toevoegen</a>
+                <a className='navbar-link' href='?profile=true'>Profiel</a>
             </div>
         </div>
     )
