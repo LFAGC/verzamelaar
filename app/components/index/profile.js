@@ -35,7 +35,7 @@ export const ProfilePage = function() {
 
 
     return(
-        <div className="absolute profile-page-main-container w-full h-full top-0 left-0">
+        <div className="fixed profile-page-main-container w-full h-full top-0 left-0">
             <div className='absolute profile-page-menu-container left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
                 <div className='absolute profile-page-menu-close' onClick={closeMenu}>X</div>
 

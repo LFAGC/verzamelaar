@@ -33,7 +33,7 @@ export const AddVehicleMenu = function() {
     }
 
     return(
-        <div className="add-vehicle-menu-container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div className="add-vehicle-menu-container fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div className='add-vehicle-menu-inner-container absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                 <div className='absolute add-vehicle-menu-close' onClick={closeMenu}>X</div>
                 <span className='add-vehicle-menu-title absolute'>Voertuig Plaatsen</span>
