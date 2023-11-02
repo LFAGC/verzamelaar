@@ -212,18 +212,33 @@
         display: none;
     }
 
-    .login-text-big {
-        left: -1vh;
+    .login-form-container {
+        position: absolute;
 
+        left: 0vh;
+        right: none;
+
+        transform: translate(0, -50%);
+
+        width: 50vh;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+    .login-form-container {
+        position: absolute;
+
+        top: 25vh;
+        left: -8vh;
+
+        width: 156%;
+
+        transform: translate(0, 0);
     }
 
     .login-text-container {
-        left: -6vh;
-
-    }
-
-    .login-form-container {
-        left: -6vh;
-        width: 100%;
+        display: none;
     }
 }
