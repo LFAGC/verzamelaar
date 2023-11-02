@@ -153,11 +153,12 @@
 
 @media (max-width: 500px) {
     .carspace-container {
+        position: absolute;
         top: 20vh;
         left: 1vh;
-        width: 97%;
+        width: 94%;
         transform: translate(0, 0);
-        height: 76vh;
+        height: 70%;
 
     }
 
