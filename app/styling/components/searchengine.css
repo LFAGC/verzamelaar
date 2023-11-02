@@ -119,8 +119,20 @@
 
         transform: translate(0, 0);
 
-        z-index: 99;
+        z-index: 99;    
+        
+        opacity: 0;
+        animation: fadeInAnimation .2s ease-in forwards;
     }
+
+    @keyframes fadeInAnimation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
 
     .searchengine-toggle-mobile {
         display: block;
