@@ -42,7 +42,7 @@ export const AddVehicleMenu = function() {
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-model' type='text' placeholder='Model'></input>
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-type' type='text' placeholder='Type'></input>
                 <input className='relative add-vehicle-menu-input add-vehicle-menu-input-prijs' type='number' placeholder='Prijs'></input>
-                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-image' type='text' placeholder='Afbeelding'></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-image' type='text' placeholder='Afbeelding Link'></input>
 
                 <div className='add-vehicle-menu-types'>
                     <span className='add-vehicle-menu-types-title'>Voertuig Specificaties</span>
