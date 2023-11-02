@@ -151,10 +151,13 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .carspace-container {
-        left: 3vh;
+        top: 20vh;
+        left: 1vh;
+        width: 97%;
         transform: translate(0, 0);
+        height: 76vh;
 
     }
 

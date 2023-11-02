@@ -68,3 +68,23 @@
 
     margin-right: 1vh;
 }
+
+@media (max-width: 500px) {
+    .navbar-title {
+        top: 0;
+        left: 0;
+
+        transform: translate(0, 0);
+
+        width: 100%;
+    }
+
+    .navbar-links {
+        top: 8vh;
+        left: 8vh;
+
+        transform: translate(0, 0);
+
+        width: 82%;
+    }
+}

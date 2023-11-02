@@ -1,4 +1,6 @@
 .searchengine-container {
+    position: relative;
+
     background-color: rgba(30, 29, 29, 0.833);
 
     box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
@@ -8,6 +10,9 @@
     backdrop-filter: blur(30px);
 
     top: 20vh;
+    left: 50%;
+
+    transform: translate(-50%, 0);
 
     width: 80%;
     height: max-content;
@@ -64,30 +69,95 @@
 }
 
 .search-title {
+    display: none;
+}
+
+.search-mobile-toggle {
     position: absolute;
     display: none;
 
-    top: 1.75vh;
-    left: 19vh;
+    top: 8vh;
+    left: 1vh;
 
-    font-size: 2vh;
+    transform: translate(0, 0);
+
+    padding: 2vh;
+
+    border-radius: .5vh;
+
+    background-color: rgba(75, 75, 75, 0.592);
+
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+
+    backdrop-filter: blur(10px);
+}
+
+.search-bar-close-mobile {
+    position: absolute;
+
+    top: 20vh;
+    right: 6vh;
+
+    padding: 2vh;
+
+    background-color: rgb(26, 26, 26);
+    border-radius: .5vh;
+
     font-weight: 700;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .searchengine-container  {
-        left: 3vh;
+        display: none;
+        position: absolute;
+
+        top: 0%;
+        left: 0%;
+
+        height: 100%;
+        width: 100%;
+
         transform: translate(0, 0);
-        height: 40vh;
+
+        z-index: 99;
+    }
+
+    .searchengine-toggle-mobile {
+        display: block;
+    }
+
+    .search-mobile-toggle {
+        display: block;
     }
 
     .search-button {
-        left: 1vh;
+        position: absolute;
+        left: 50%;
+        bottom: 17.5vh;
+        width: 80%;
+
+        transform: translate(-50%, 0);
+        box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
     }
 
     .search-input {
-        left: 1vh;
 
-        width: 95%;
+        top: 40%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 80%;
+    }
+
+    .search-title {
+        position: absolute;
+        display: block;
+    
+        top: 20vh;
+        left: 6vh;
+    
+        font-size: 4vh;
+        font-weight: 700;
     }
 }

@@ -1,9 +1,14 @@
-import { Navbar } from '@/app/components/navbar'
 import '../../styling/pages/login.css'
 import { LoginForm } from '@/app/components/login/loginform'
 import { LoginSlideShow } from '@/app/components/login/loginslide'
 import { LoginText } from '@/app/components/login/logintext'
 import Image from 'next/image'
+
+export const metadata = {
+    title: 'Autoplaza.nl Log hier in!',
+    description: '',
+}
+
 
 export default function Login(Register) {    
     return(

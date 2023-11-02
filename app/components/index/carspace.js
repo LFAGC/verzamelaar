@@ -5,12 +5,19 @@ import { supabase } from '@/app/lib/supabase/config'
 import { useSearchParams, useRouter } from 'next/navigation'
 import React from 'react';
 
+let SearchString = ''
+ 
+export const metadata = {
+    title: 'Autoplaza.nl',
+    description: '',
+}
+
+
 export const CarSpace = function() {
     const query = useSearchParams()
     const router = useRouter()
 
     const [allPosts, setPosts] = useState([])
-    const [hasSearched, setHasSearched] = useState(false)
 
     const temporaryPosts = []
 
