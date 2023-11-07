@@ -179,7 +179,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 500px ) {
+@media (max-width: 520px ) {
     .add-vehicle-menu-inner-container {
         width: 50vh;
     }

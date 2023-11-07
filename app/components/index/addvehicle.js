@@ -1,8 +1,7 @@
 import { AddVehicle } from '@/app/lib/advertisements/addvehicle'
 import '../../styling/components/addvehicle.css'
 import { useRouter} from 'next/navigation'
-
-
+import { useState } from 'react'
 
 export const AddVehicleMenu = function() {
     const router = useRouter();
@@ -11,6 +10,8 @@ export const AddVehicleMenu = function() {
         router.push('/')
         router.refresh()
     }
+
+    const [checkData, setCheckData] = useState([])
 
     const addVehicleHandler = function() {
         const postData = {
@@ -29,7 +30,9 @@ export const AddVehicleMenu = function() {
             
         }
 
-        AddVehicle(postData, router)
+        if (postData.make != '' && postData.model != '' && postData.type != '' && postData.price != '' && postData.image.includes('http') && postData.types.milage != '' && postData.types.horsepower != '' && postData.types.fueltype != '') {
+            AddVehicle(postData, router)
+        }
     }
 
     return(
@@ -38,18 +41,18 @@ export const AddVehicleMenu = function() {
                 <div className='absolute add-vehicle-menu-close' onClick={closeMenu}>X</div>
                 <span className='add-vehicle-menu-title absolute'>Voertuig Plaatsen</span>
 
-                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-merk' type='text' placeholder='Merk'></input>
-                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-model' type='text' placeholder='Model'></input>
-                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-type' type='text' placeholder='Type'></input>
-                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-prijs' type='number' placeholder='Prijs'></input>
-                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-image' type='text' placeholder='Afbeelding Link'></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-merk' type='text' placeholder='Merk' required></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-model' type='text' placeholder='Model' required></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-type' type='text' placeholder='Type' required></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-prijs' type='number' placeholder='Prijs' required></input>
+                <input className='relative add-vehicle-menu-input add-vehicle-menu-input-image' type='text' placeholder='Afbeelding Link' required></input>
 
                 <div className='add-vehicle-menu-types'>
                     <span className='add-vehicle-menu-types-title'>Voertuig Specificaties</span>
 
-                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-stand' type='number' placeholder='Kilometerstand'></input>
-                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-vermogen' type='number' placeholder='Vermogen'></input>
-                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-brandstof' type='text' placeholder='Brandstof'></input>
+                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-stand' type='number' placeholder='Kilometerstand' required></input>
+                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-vermogen' type='number' placeholder='Vermogen' required></input>
+                    <input className='relative add-vehicle-menu-type-input add-vehicle-menu-type-input-brandstof' type='text' placeholder='Brandstof' required></input>
                 </div>
 
                 <div className='absolute add-vehicle-menu-button' onClick={addVehicleHandler}><span>Toevoegen</span></div>
